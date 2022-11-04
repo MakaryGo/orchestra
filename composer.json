@@ -41,9 +41,16 @@
         "symfony/validator": "6.1.*",
         "symfony/web-link": "6.1.*",
         "symfony/yaml": "6.1.*",
+        "telixj/phpbb-sessions-auth-bundle": "dev-master",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/MakaryGo/PhpbbSessionsAuthBundle"
+        }
+    ],
     "config": {
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
@@ -77,7 +84,8 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
+            "cache:clear --no-warmup": "symfony-cmd",
+            "cache:warmup": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
