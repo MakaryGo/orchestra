@@ -276,6 +276,9 @@
             "config/packages/messenger.yaml"
         ]
     },
+    "telixj/phpbb-sessions-auth-bundle": {
+        "version": "dev-master"
+    },
     "twig/extra-bundle": {
         "version": "v3.4.0"
     }
