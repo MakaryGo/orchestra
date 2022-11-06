@@ -7242,12 +7242,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MakaryGo/PhpbbSessionsAuthBundle.git",
-                "reference": "268426f7c00e5e5f6871bc69f054bece0981c35f"
+                "reference": "339000569145de62071ef5f09e72640a83ce6ac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MakaryGo/PhpbbSessionsAuthBundle/zipball/268426f7c00e5e5f6871bc69f054bece0981c35f",
-                "reference": "268426f7c00e5e5f6871bc69f054bece0981c35f",
+                "url": "https://api.github.com/repos/MakaryGo/PhpbbSessionsAuthBundle/zipball/339000569145de62071ef5f09e72640a83ce6ac3",
+                "reference": "339000569145de62071ef5f09e72640a83ce6ac3",
                 "shasum": ""
             },
             "require": {
@@ -7292,7 +7292,7 @@
                 "issues": "https://www.phpbb.com/bugs/website/",
                 "source": "https://github.com/MakaryGo/PhpbbSessionsAuthBundle/tree/master"
             },
-            "time": "2022-11-04T09:40:25+00:00"
+            "time": "2022-11-05T15:37:57+00:00"
         },
         {
             "name": "twig/extra-bundle",
