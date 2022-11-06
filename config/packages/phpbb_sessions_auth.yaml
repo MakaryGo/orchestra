@@ -1,11 +1,11 @@
 phpbb_sessions_auth:
     session:
-        cookie_name: "phpbb_foo" # must match your forum admin cookie name configuration
+        cookie_name: "MAW" # must match your forum admin cookie name configuration
         login_page: "ucp.php?mode=login" # your login page, by default phpbb login page but you can use a custom page
         force_login: false # if true, anonymous users will be redirected to the login page
     database:
         entity_manager: "forum" # must match the key bellow doctrine.orm.entity_managers
-        prefix: "phpbb_" # change this if you do not use the default "phpbb_" prefix
+        prefix: "pb3_" # change this if you do not use the default "phpbb_" prefix
     roles: #relation between group_id from groups table of phpBB and roles of your application
         1: anonymous #GUESTS
         2: user #REGISTERED

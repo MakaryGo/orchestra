@@ -1,21 +1,36 @@
 doctrine:
     dbal:
-        url: '%env(resolve:DATABASE_URL)%'
-
+        default_connection: default
+        connections:
+            default:
+                url: '%env(resolve:DATABASE_URL)%'
+            forum:
+                driver:   "%forum_database_driver%"
+                host:     "%forum_database_host%"
+                port:     "%forum_database_port%"
+                dbname:   "%forum_database_name%"
+                user:     "%forum_database_user%"
+                password: "%forum_database_password%"
+                charset:  "UTF8"
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '13'
     orm:
         auto_generate_proxy_classes: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
-        auto_mapping: true
-        mappings:
-            App:
-                is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
-
+        entity_managers:
+            default:    
+                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+                auto_mapping: true
+                mappings:
+                    App:
+                        is_bundle: false
+                        dir: '%kernel.project_dir%/src/Entity'
+                        prefix: 'App\Entity'
+                        alias: App
+            forum:
+                connection: forum
+                mappings:
+                    PhpbbSessionsAuthBundle: ~
 when@test:
     doctrine:
         dbal:
